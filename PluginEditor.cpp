@@ -39,30 +39,19 @@ void DestructifierV2AudioProcessorEditor::paint (juce::Graphics& g)
     g.setColour(juce::Colours::white);
     g.setFont(font);
     
-    // If not resizeable:
     g.setFont(16.0f);
     g.drawText("COW ELVIS DSP", getWidth()/2-100, getHeight()/2-175, 200, 100, juce::Justification::centred);
     g.setFont(32.0f);
     g.drawText("DESTRUCTIFIER", getWidth()/2-100, getHeight()/2-150, 200, 100, juce::Justification::centred);
     g.setFont(16.0f);
     g.drawText("FLAVOR",getWidth()/2-100, getHeight()/2+70, 200, 100, juce::Justification::centred);
-    
-    // If resizeable:
-//    g.drawText("COW ELVIS DSP", getWidth()/2-getWidth()/3, getHeight()/2-getHeight()/1.75-10, (getWidth()/3)*2, getHeight()/3, juce::Justification::centred);
-//    g.setFont(32.0f);
-//    g.drawText("DESTRUCTIFIER", getWidth()/2-getWidth()/3, getHeight()/2-getHeight()/2-5,  (getWidth()/3)*2, getHeight()/3, juce::Justification::centred);
-//    g.setFont(16.0f);
-//    g.drawText("FLAVOR",getWidth()/2-getWidth()/3, getHeight()/2+getHeight()/4.5, (getWidth()/3)*2, getHeight()/3, juce::Justification::centred);
 }
 
 void DestructifierV2AudioProcessorEditor::resized()
 {
-    // If not resizeable:
     knob.setBounds(getWidth()/2-85, getHeight()/2-85, 170, 170);
     mode.setBounds(getWidth()/2-13, getHeight()/2+80, 26, 26);
-    // If resizeable:
-//    knob.setBounds(getWidth()/2-getWidth()/4, getHeight()/2-getHeight()/4, getWidth()/2, getHeight()/2);
-//    mode.setBounds(getWidth()/2-getWidth()/24, getHeight()/2+getHeight()/4, getWidth()/12, getHeight()/12);
+
     knob.setValue(audioProcessor.amount);
     
     if (audioProcessor.mode == 0)

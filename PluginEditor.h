@@ -4,8 +4,7 @@
 #include "PluginProcessor.h"
 
 //==============================================================================
-/**
-*/
+
 class DestructifierV2AudioProcessorEditor  : public juce::AudioProcessorEditor, public juce::Slider::Listener, public juce::Button::Listener
 {
 public:

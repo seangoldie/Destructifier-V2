@@ -11,8 +11,7 @@
 #include <JuceHeader.h>
 
 //==============================================================================
-/**
-*/
+
 class DestructifierV2AudioProcessor  : public juce::AudioProcessor
 {
 public:
